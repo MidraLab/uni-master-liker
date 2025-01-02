@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
 using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 using UniMasterLinker.API;
 using UniMasterLinker.DataObject;
 using UnityEditor;
@@ -16,7 +16,7 @@ namespace UniMasterLinker.Util
         ///     ゲームデータオブジェクトの更新(外部から呼び出し用)
         /// </summary>
         /// <param name="token"></param>
-        public static async UniTask UpdateDataObject(CancellationToken token)
+        public static async Task UpdateDataObject(CancellationToken token)
         {
             // 実装例
 
