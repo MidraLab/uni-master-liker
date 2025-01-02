@@ -1,7 +1,6 @@
 ﻿#if UNITY_EDITOR
 
 using System.Threading;
-using Cysharp.Threading.Tasks;
 using UniMasterLinker.Util;
 using UnityEditor;
 
@@ -21,7 +20,7 @@ namespace UniMasterLinker.Editor
         private static void UpdateDataObject()
         {
             _cancellationTokenSource = new CancellationTokenSource();
-            UpdateGameDataObject.UpdateDataObject(_cancellationTokenSource.Token).Forget();
+            UpdateGameDataObject.UpdateDataObject(_cancellationTokenSource.Token);
         }
     }
 }
